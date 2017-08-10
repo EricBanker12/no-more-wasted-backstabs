@@ -8,6 +8,8 @@ module.exports = {
 		6: true // Backstab
 	},
 	10: { // Brawler
+		// Known Issue: Using Meat Grinder on a target in-range 
+		// but not knocked up will still consume the cooldown.
 		20: true // Meat Grinder
 	},
 	11: { // Ninja
