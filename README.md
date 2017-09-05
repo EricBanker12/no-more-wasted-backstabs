@@ -9,4 +9,7 @@ Tera-Proxy module for Tera Online. Blocks targeted teleport skills without a tar
 ### Requirements
 [Tera-Proxy](https://github.com/meishuu/tera-proxy) and dependencies
 
-[Tera-Data](https://github.com/meishuu/tera-data) updated after August 9, 2017.
+The following opcodes must be mapped in your `tera-proxy/node_modules/tera-data/map/protocol.{version}.map` file:
+* C_START_TARGETED_SKILL
+* S_CANNOT_START_SKILL
+* S_LOGIN
