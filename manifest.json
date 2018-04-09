@@ -1,0 +1,16 @@
+{
+  "files": {
+    "config.js": {
+      "hash": "6f7333ece257d8f7129a720b4e1e419706922ddf27a6cf3fa478100fb17b3262",
+      "overwrite": false
+    },
+    "index.js": "37c7afc1e6e33c31503f3ab7b0d504b4a8a4d4f36350e681c3b8e3e9a287d2b9",
+    "module.json": "da646914eb63a27d403199451f603a8d466c959e4ddeb6c2e7286c665cc3ac68",
+    "README.md": "3583f78fb571e0448a6e216da07d6b1c9fb57bd95ee01844872358aae77070f7"
+  },
+  "defs": {
+    "S_LOGIN": 10,
+    "C_START_TARGETED_SKILL": 3,
+    "S_CANNOT_START_SKILL": 1
+  }
+}
