@@ -6,7 +6,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
     let job
 
     // get character class on log in
-    dispatch.hook('S_LOGIN', 9, event => { job = (event.templateId - 10101) % 100 })
+    dispatch.hook('S_LOGIN', 10, event => { job = (event.templateId - 10101) % 100 })
 
     // block no-target C_START_TARGETED_SKILL
     dispatch.hook('C_START_TARGETED_SKILL', 3, {order: -100}, event => {
