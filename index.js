@@ -19,7 +19,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
             if(event.targets[0].id.equals(0)) {
                 // block the skill usage
                 Object.assign(event.skill, {type: 0, npc: false, huntingZoneId: 0, reserved: 0})
-                dispatch.toClient('S_CANNOT_START_SKILL', dispatch.base.majorPatchVersion >= 74 ? 6 : 5, {
+                dispatch.toClient('S_CANNOT_START_SKILL', dispatch.base.majorPatchVersion >= 74 ? 4 : 3, {
                     skill: event.skill
                 })
                 return false

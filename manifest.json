@@ -6,12 +6,12 @@
 			"hash": "29ab3d19f443029c2b48fbcad0dd36464cad738229a6aafd57354e95c8f83092",
 			"overwrite": false
 		},
-		"index.js": "748de469b3326ded47fdebc190064744515c7f8f76bcd641937828bece36b347",
+		"index.js": "515d5b7dc73fb65899f16c6e1c11583da5728084faa41bce5523253e159c695e",
 		"module.json": "9a606b6e38dde29c3ed4ffd29daf2a75dd1398cc1b3d942c7fa331c70a4308d9"
 	},
 	"defs": {
 		"C_START_TARGETED_SKILL": [5,6],
-		"S_CANNOT_START_SKILL": [5,6],
+		"S_CANNOT_START_SKILL": [3,4],
 		"S_LOGIN": 10
 	}
 }
