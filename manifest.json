@@ -1,17 +1,17 @@
 {
 	"files": {
+		"README.md": "b87592019c88f31bf2907860e288c1495c9cc5fced5b1806703a8170c766a8f1",
+		"README.url": "86c05132be23b463a345e6e581d8772ed230c56af4e9b4e138daee9a8e9f8972",
 		"config.js": {
-			"hash": "9b36dfaf3111eae6bb58b229194876cc3961098c07bd7e63f33d4f8e510a7d84",
+			"hash": "29ab3d19f443029c2b48fbcad0dd36464cad738229a6aafd57354e95c8f83092",
 			"overwrite": false
 		},
-		"index.js": "37c7afc1e6e33c31503f3ab7b0d504b4a8a4d4f36350e681c3b8e3e9a287d2b9",
-		"module.json": "da646914eb63a27d403199451f603a8d466c959e4ddeb6c2e7286c665cc3ac68",
-		"README.md": "b87592019c88f31bf2907860e288c1495c9cc5fced5b1806703a8170c766a8f1",
-		"README.url": "86c05132be23b463a345e6e581d8772ed230c56af4e9b4e138daee9a8e9f8972"
+		"index.js": "748de469b3326ded47fdebc190064744515c7f8f76bcd641937828bece36b347",
+		"module.json": "9a606b6e38dde29c3ed4ffd29daf2a75dd1398cc1b3d942c7fa331c70a4308d9"
 	},
 	"defs": {
-		"S_LOGIN": 10,
-		"C_START_TARGETED_SKILL": 3,
-		"S_CANNOT_START_SKILL": 1
+		"C_START_TARGETED_SKILL": [5,6],
+		"S_CANNOT_START_SKILL": [5,6],
+		"S_LOGIN": 10
 	}
 }
