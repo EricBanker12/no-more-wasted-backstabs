@@ -6,12 +6,17 @@
 			"hash": "29ab3d19f443029c2b48fbcad0dd36464cad738229a6aafd57354e95c8f83092",
 			"overwrite": false
 		},
-		"index.js": "1383fd353cb3b69fd25f2e036fc61fd95526fecce1a999ab2cd52ab15c924d83",
+		"index.js": "7b6d586e3ac2600e686da9ed650c899494a0e764c3b39e6d7c9f60d247f1a571",
 		"module.json": "9a606b6e38dde29c3ed4ffd29daf2a75dd1398cc1b3d942c7fa331c70a4308d9"
 	},
 	"defs": {
 		"C_START_TARGETED_SKILL": 6,
+		"S_ACTION_END": 5,
+		"S_ACTION_STAGE": [7,8],
 		"S_CANNOT_START_SKILL": 4,
-		"S_LOGIN": 10
+		"S_DESPAWN_NPC": 3,
+		"S_LOGIN": 10,
+		"S_NPC_LOCATION": 3,
+		"S_SPAWN_NPC": 9
 	}
 }
