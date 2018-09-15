@@ -106,7 +106,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
                         y = Math.sin(mobs[gameId].w) * d * 25,
                         sqrDistance = event.loc.sqrDist2D(mobs[gameId].loc.subN({x:x, y:y, z:0}))
                     // if too far away
-                    if (sqrDistance > (skillDistances[job][skillBase] * 25) ^ 2) {
+                    if (sqrDistance > (skillDistances[job][skillBase] * 25) ** 2) {
                         // block the skill usage
                         Object.assign(event.skill, {type: 0, npc: false, huntingZoneId: 0, reserved: 0})
                         dispatch.toClient('S_CANNOT_START_SKILL', 4, {
