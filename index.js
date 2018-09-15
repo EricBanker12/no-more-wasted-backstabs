@@ -1,22 +1,24 @@
 module.exports = function noMoreWastedBackstabs(dispatch) {
     // constants
-    const config = require('./config.js')
+    const config = require('./config.js'),
+        Vec3 = require('tera-vec3'),
+        debug = false
 
     const skillDistances = {
         0: { // Warrior
-            22: 17 // Backstab
+            22: 30 // Backstab
         },
         2: { // Slayer
-            6: 17 // Backstab
+            6: 30 // Backstab
         },
         10: { // Brawler
-            20: 30 // Meat Grinder
+            20: 100 // Meat Grinder
         },
         11: { // Ninja
-            7: 17 // Decoy
+            7: 30 // Decoy
         },
         12: { // Valkyrie
-            20: 17 // Backstab
+            20: 30 // Backstab
         }
     }
 
@@ -26,6 +28,10 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
             1101: 3, // Terradrax
             1102: 3, // Umbradrax
             1103: 3 // Aquadrax
+        },
+        // Testing BAM (Because HH requires having friends! ;_;)
+        13: { // Island of Dawn
+            7007: 2 // Brutal Naga Battlemaster
         }
     }
 
@@ -89,6 +95,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
         if(config[job] && config[job][skillBase]) {
             // if skill has no target
             if(event.targets[0].id.equals(0)) {
+                if (debug) console.log('No target')
                 // block the skill usage
                 Object.assign(event.skill, {type: 0, npc: false, huntingZoneId: 0, reserved: 0})
                 dispatch.toClient('S_CANNOT_START_SKILL', 4, {
@@ -102,11 +109,14 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
                 if (mobs[gameId]) {
                     // get backside coordinates
                     let d = bigMobs[mobs[gameId].huntingZoneId][mobs[gameId].templateId],
-                        x = Math.cos(mobs[gameId].w) * d * 25,
-                        y = Math.sin(mobs[gameId].w) * d * 25,
-                        sqrDistance = event.loc.sqrDist2D(mobs[gameId].loc.subN({x:x, y:y, z:0}))
+                        sqrDistance = event.loc.sqrDist2D(mobs[gameId].loc.subN(new Vec3(d*25,0,0).rotate(mobs[gameId].w)))
+                    if (debug) {
+                        let distance = Math.round(event.loc.sqrDist2D(mobs[gameId].loc) ** 0.5 / 25)
+                        console.log('distance =', distance, 'm | back =', Math.round(sqrDistance ** 0.5 / 25), 'm')
+                    }
                     // if too far away
                     if (sqrDistance > (skillDistances[job][skillBase] * 25) ** 2) {
+                        if (debug) console.log('Too far away')
                         // block the skill usage
                         Object.assign(event.skill, {type: 0, npc: false, huntingZoneId: 0, reserved: 0})
                         dispatch.toClient('S_CANNOT_START_SKILL', 4, {
