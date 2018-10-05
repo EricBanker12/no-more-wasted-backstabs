@@ -43,7 +43,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
     // get mob location
     function updateLoc(event) {
         for (let mob of mobs) {
-            if (mob.gameId.sub(event.gameId) == 0) {
+            if (mob.gameId.equals(event.gameId)) {
                 mob.loc = event.loc
                 mob.w = event.w
             }
@@ -86,7 +86,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
     // S_DESPAWN_NPC
     dispatch.hook('S_DESPAWN_NPC', 3, {order: 300, filter: {fake: null}}, event => {
         for (let index in mobs) {
-            if (mobs[index].gameId.sub(event.gameId) == 0) {
+            if (mobs[index].gameId.equals(event.gameId)) {
                 mobs.splice(index, 1)
             }
         }
@@ -113,7 +113,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
             else {
                 // if bigMob (HH p1 dragons)
                 for (let mob of mobs) {
-                    if (mob.gameId.sub(gameId) == 0) {
+                    if (mob.gameId.equals(gameId)) {
                         // get backside coordinates
                         let d = bigMobs[mob.huntingZoneId][mob.templateId],
                             sqrDistance = event.loc.sqrDist2D(mob.loc.subN(new Vec3(d*25,0,0).rotate(mob.w)))
