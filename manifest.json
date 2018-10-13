@@ -6,7 +6,7 @@
 			"hash": "29ab3d19f443029c2b48fbcad0dd36464cad738229a6aafd57354e95c8f83092",
 			"overwrite": false
 		},
-		"index.js": "1acf47275b2e6b21f545ca601eb91f491051069a10433f6df45df99682f8540e",
+		"index.js": "d82efbf6cf67cccb4e1fb33f45bbe1f233e920875d6591be7109d16d0d530c06",
 		"module.json": "9a606b6e38dde29c3ed4ffd29daf2a75dd1398cc1b3d942c7fa331c70a4308d9"
 	},
 	"defs": {
@@ -17,6 +17,6 @@
 		"S_DESPAWN_NPC": 3,
 		"S_LOGIN": 10,
 		"S_NPC_LOCATION": 3,
-		"S_SPAWN_NPC": 9
+		"S_SPAWN_NPC": [9,10]
 	}
 }
