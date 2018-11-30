@@ -95,7 +95,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
     // block no-target C_START_TARGETED_SKILL
     dispatch.hook('C_START_TARGETED_SKILL', 6, {order: -100}, event => {
         // get skill used
-        let skill = event.skill.id //event.skill - 0x4000000,
+        let skill = event.skill.id,
             skillBase = Math.floor(skill / 10000)
         // if class and skill are in config
         if(config[job] && config[job][skillBase]) {
