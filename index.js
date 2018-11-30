@@ -43,7 +43,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
     // get mob location
     function updateLoc(event) {
         for (let mob of mobs) {
-            if (mob.gameId.equals(event.gameId)) {
+            if (mob.gameId == event.gameId) {
                 mob.loc = event.loc
                 mob.w = event.w
             }
@@ -86,7 +86,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
     // S_DESPAWN_NPC
     dispatch.hook('S_DESPAWN_NPC', 3, {order: 300, filter: {fake: null}}, event => {
         for (let index in mobs) {
-            if (mobs[index].gameId.equals(event.gameId)) {
+            if (mobs[index].gameId == event.gameId) {
                 mobs.splice(index, 1)
             }
         }
@@ -101,7 +101,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
         if(config[job] && config[job][skillBase]) {
             let gameId = event.targets[0].id
             // if skill has no target
-            if(gameId == 0 || gameId.equals(0)) {
+            if(gameId == 0) {
                 if (debug) console.log('No target')
                 // block the skill usage
                 Object.assign(event.skill, {type: 0, npc: false, huntingZoneId: 0, reserved: 0})
@@ -113,7 +113,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
             else {
                 // if bigMob (HH p1 dragons)
                 for (let mob of mobs) {
-                    if (mob.gameId.equals(gameId)) {
+                    if (mob.gameId == gameId) {
                         // get backside coordinates
                         let d = bigMobs[mob.huntingZoneId][mob.templateId],
                             sqrDistance = event.loc.sqrDist2D(mob.loc.subN(new Vec3(d*25,0,0).rotate(mob.w)))
