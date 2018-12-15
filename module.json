@@ -1,5 +1,8 @@
 {
-	"disableAutoUpdate": false,
-	"servers": ["https://raw.githubusercontent.com/Mister-Kay/no-more-wasted-backstabs/master/"],
-	"supportUrl": "https://github.com/Mister-Kay/no-more-wasted-backstabs/issues"
+    "disableAutoUpdate": false,
+    "servers": ["https://raw.githubusercontent.com/Mister-Kay/no-more-wasted-backstabs/master/"],
+    "supportUrl": "https://github.com/Mister-Kay/no-more-wasted-backstabs/issues",
+    "name": "no-more-wasted-backstabs",
+    "author": "Mister-Kay",
+    "description": "Blocks targeted teleport skills without a target."
 }

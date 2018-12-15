@@ -1,22 +1,22 @@
 {
-	"files": {
-		"README.md": "b87592019c88f31bf2907860e288c1495c9cc5fced5b1806703a8170c766a8f1",
-		"README.url": "86c05132be23b463a345e6e581d8772ed230c56af4e9b4e138daee9a8e9f8972",
-		"config.js": {
-			"hash": "29ab3d19f443029c2b48fbcad0dd36464cad738229a6aafd57354e95c8f83092",
-			"overwrite": false
-		},
-		"index.js": "f5e498d36d404ba2dfb322ec0c6dbb3515d8bcbfd6b0c95ad1693501a3abea2a",
-		"module.json": "9a606b6e38dde29c3ed4ffd29daf2a75dd1398cc1b3d942c7fa331c70a4308d9"
-	},
-	"defs": {
-		"C_START_TARGETED_SKILL": 6,
-		"S_ACTION_END": 5,
-		"S_ACTION_STAGE": 8,
-		"S_CANNOT_START_SKILL": 4,
-		"S_DESPAWN_NPC": 3,
-		"S_LOGIN": 10,
-		"S_NPC_LOCATION": 3,
-		"S_SPAWN_NPC": 10
-	}
+    "files": {
+        "README.md": "b87592019c88f31bf2907860e288c1495c9cc5fced5b1806703a8170c766a8f1",
+        "README.url": "86c05132be23b463a345e6e581d8772ed230c56af4e9b4e138daee9a8e9f8972",
+        "config.js": {
+            "hash": "29ab3d19f443029c2b48fbcad0dd36464cad738229a6aafd57354e95c8f83092",
+            "overwrite": false
+        },
+        "index.js": "a3d398f89d6111007ff1aa463ff64ddb43c7004b490a4d4665929227fd70c266",
+        "module.json": "13c34de2c9fe67d650035a37421f5670b4989508ac7564729952f3363b157432"
+    },
+    "defs": {
+        "C_START_TARGETED_SKILL": 6,
+        "S_ACTION_END": 5,
+        "S_ACTION_STAGE": 9,
+        "S_CANNOT_START_SKILL": 4,
+        "S_DESPAWN_NPC": 3,
+        "S_LOGIN": 12,
+        "S_NPC_LOCATION": 3,
+        "S_SPAWN_NPC": 10
+    }
 }
