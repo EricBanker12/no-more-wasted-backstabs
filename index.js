@@ -54,7 +54,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
     dispatch.hook('S_LOGIN', 12, event => { job = (event.templateId - 10101) % 100 })
 
     // S_SPAWN_NPC
-    dispatch.hook('S_SPAWN_NPC', 10, {order: 300, filter: {fake: null}}, event => {
+    dispatch.hook('S_SPAWN_NPC', dispatch.majorPatchVersion >= 79 ? 11 : 10, {order: 300, filter: {fake: null}}, event => {
         // if HH P1 dragon
         if (bigMobs[event.huntingZoneId] && bigMobs[event.huntingZoneId][event.templateId]) {
             // track position
