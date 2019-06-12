@@ -6,7 +6,7 @@
             "hash": "29ab3d19f443029c2b48fbcad0dd36464cad738229a6aafd57354e95c8f83092",
             "overwrite": false
         },
-        "index.js": "4f75cce05dcb34eddf0727622a9cb97e82965e50449adcc8a1b551b8788e8c67",
+        "index.js": "ec80b2cb43025932719bc99da1d26f8201d07c9b6fe02985529d38b0400e9f7c",
         "module.json": "13c34de2c9fe67d650035a37421f5670b4989508ac7564729952f3363b157432"
     },
     "defs": {
@@ -15,7 +15,7 @@
         "S_ACTION_STAGE": 9,
         "S_CANNOT_START_SKILL": 4,
         "S_DESPAWN_NPC": 3,
-        "S_LOGIN": [12,13],
+        "S_LOGIN": 13,
         "S_NPC_LOCATION": 3,
         "S_SPAWN_NPC": 11
     }
