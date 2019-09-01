@@ -6,11 +6,11 @@
             "hash": "29ab3d19f443029c2b48fbcad0dd36464cad738229a6aafd57354e95c8f83092",
             "overwrite": false
         },
-        "index.js": "ec80b2cb43025932719bc99da1d26f8201d07c9b6fe02985529d38b0400e9f7c",
+        "index.js": "fd2929d165deef8597eb2e73b5e5bd59ea355427aa90f79e01244d84dc0360dd",
         "module.json": "13c34de2c9fe67d650035a37421f5670b4989508ac7564729952f3363b157432"
     },
     "defs": {
-        "C_START_TARGETED_SKILL": 6,
+        "C_START_TARGETED_SKILL": 7,
         "S_ACTION_END": 5,
         "S_ACTION_STAGE": 9,
         "S_CANNOT_START_SKILL": 4,
