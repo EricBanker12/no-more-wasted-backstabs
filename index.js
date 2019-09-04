@@ -99,7 +99,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
             skillBase = Math.floor(skill / 10000)
         // if class and skill are in config
         if(config[job] && config[job][skillBase]) {
-            let gameId = event.targets[0].id
+            let gameId = event.targets[0].gameId
             // if skill has no target
             if(gameId == 0) {
                 if (debug) console.log('No target')
