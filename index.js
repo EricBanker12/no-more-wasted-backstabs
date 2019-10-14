@@ -51,7 +51,7 @@ module.exports = function noMoreWastedBackstabs(dispatch) {
     }
 
     // get character class on log in
-    dispatch.hook('S_LOGIN', 13, event => { job = (event.templateId - 10101) % 100 })
+    dispatch.hook('S_LOGIN', dispatch.majorPatchVersion < 86 ? 13 : 14, event => { job = (event.templateId - 10101) % 100 })
 
     // S_SPAWN_NPC
     dispatch.hook('S_SPAWN_NPC', 11, {order: 300, filter: {fake: null}}, event => {
